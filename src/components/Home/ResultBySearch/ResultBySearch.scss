@@ -1,0 +1,48 @@
+.search-result {
+  background-color: rgba(0, 0, 0, 0.288);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  bottom: 5%;
+  left: 50%;
+  display: grid;
+  transform: translateX(-50%);
+  grid-template-areas:
+    "image title rating"
+    "image genres genres"
+    "image awards awards";
+
+  & > img {
+    height: 100px;
+    grid-area: image;
+  }
+
+  &__header {
+    padding: 0 2rem;
+  }
+  &__title {
+    font-weight: 700;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    grid-area: title;
+  }
+  &__genres {
+    grid-area: genres;
+  }
+
+  &__rating {
+    grid-area: rating;
+    padding-top: 0.9rem;
+    background: yellow;
+    color: black;
+    font-weight: 900;
+  }
+  &__awards {
+    margin: 0 0 0 2rem;
+    padding-top: 1rem;
+    grid-area: awards;
+    border-top: 1px solid rgb(146, 132, 132);
+  }
+}
